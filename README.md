@@ -7,8 +7,8 @@ Instructions
     - End Date
     - Visits(optional)
   3. Feel free to change what you wish but you will most likely want to focus on
-     "CVT.program_id Not In (74)" and "BillingMatrix.cpt_4_code Not In  ('', '99999', 'nobill','none')"
-     This allows you to omit specific programs and non-billing CPT codes.
+     - "CVT.program_id Not In (74)" and "BillingMatrix.cpt_4_code Not In  ('', '99999', 'nobill','none')"
+     - This allows you to omit specific programs and non-billing CPT codes.
   4. Visual Studio - This application was built using C# but feel free to port it any language.
      The email is the exact email we use to send to employees. It was developed by a billing
      employee. You will need to change some code in order to test this application.
@@ -32,7 +32,8 @@ Instructions
       same day visits.
       - Create a scheduled task(at least 2)
         *  Monday - This scheduled task runs on Monday at 9:05 am and 4:05 pm. It pulls data from Friday and over the weekend.
-            - Triggers - Weekly - 9:05 am, Weekly - 4:05 pm
+            - Triggers 
+                - Weekly - 9:05 am, Weekly - 4:05 pm
             - Actions - Start a program; 
             - Program/script: "C:\HorizonBH\ServicesNotSigned\Services Not Signed.exe"
             - Add a arguments(optional): -3
@@ -45,7 +46,8 @@ Instructions
             - No arguments    
         * Tue-Fri - This scheduled task runs on Mon-Fri at 3:05 pm. It pulls data for the same day for E&M visits.
                       It also CC's additional employees.
-            - Triggers - Weekly - 3:05 pm every Monday, Tuesday, Wednesday, Thursday, Friday of every week 
+            - Triggers 
+                - Weekly - 3:05 pm every Monday, Tuesday, Wednesday, Thursday, Friday of every week 
             - Actions - Start a program; 
             - Program/script: "C:\HorizonBH\ServicesNotSigned\Services Not Signed.exe"
             - Add a arguments(optional): 0 CC:email@domain.org;email@domain.org;email@domain.org;email@domain.org Visittype:E&M%
